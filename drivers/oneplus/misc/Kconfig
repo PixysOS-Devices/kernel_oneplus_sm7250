@@ -8,11 +8,12 @@
 #	help
 #		if you want to read/write the param partition in kernel,
 #		then you must say Y here.
-#config PROJECT_INFO
-#    bool "detect project info"
-#    default n
-#    help
-#      detect projcet info  If unsure, say n.
+
+config PROJECT_INFO
+    bool "detect project info"
+    default n
+    help
+      detect projcet info  If unsure, say n.
 
 config OEM_BOOT_MODE
     bool "detect oem boot mode"
