@@ -171,12 +171,12 @@ static int fingerprint_detect_probe(struct platform_device *pdev)
 
 	pr_info("%s: %d\n", __func__, id0);
 	if (id0) {
-		//push_component_info(FINGERPRINTS,
-		//	"goodix9608", "goodix");
+		push_component_info(FINGERPRINTS,
+			"goodix9608", "goodix");
 		fp_detect->sensor_version = 0x07;
 	} else if (!id0) {
-		//push_component_info(FINGERPRINTS,
-		//	"goodix9608", "goodix");
+		push_component_info(FINGERPRINTS,
+			"goodix9608", "goodix");
 		fp_detect->sensor_version = 0x9638;
 	}/* else if (!id0 && !id1) {
 		push_component_info(FINGERPRINTS,

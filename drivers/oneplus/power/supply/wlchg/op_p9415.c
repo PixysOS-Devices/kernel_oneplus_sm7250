@@ -1796,7 +1796,7 @@ static int p9415_check_idt_fw_update(struct op_p9415_ic *chip)
 		snprintf(chip->fw_id, 16, "0x%s", new_hw_version);
 	else
 		snprintf(chip->fw_id, 16, "0x%s", pre_hw_version);
-	//push_component_info(WIRELESS_CHARGE, chip->fw_id, chip->manu_name);
+	push_component_info(WIRELESS_CHARGE, chip->fw_id, chip->manu_name);
 
 	return rc;
 }

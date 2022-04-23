@@ -2879,7 +2879,7 @@ static void update_fireware_version_func(struct work_struct *work)
 		snprintf(di->manu_name, 255, "%s", mcu_id_text[di->asic_hw_id]);
 	else
 		snprintf(di->manu_name, 255, "%s", "ONEPLUS");
-	//push_component_info(FAST_CHARGE, di->fw_id, di->manu_name);
+	push_component_info(FAST_CHARGE, di->fw_id, di->manu_name);
 }
 void di_watchdog(struct timer_list *t)
 {

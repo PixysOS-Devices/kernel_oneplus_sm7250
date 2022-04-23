@@ -1465,7 +1465,7 @@ bool himax_ic_package_check(void)
 		himax_register_read(tmp_addr, 4, tmp_data, false);
 
 		TPD_INFO("%s:Read driver IC ID = %X, %X, %X\n", __func__, tmp_data[3], tmp_data[2], tmp_data[1]);
-		//push_component_info(TP, "83112F", "Himax");
+		push_component_info(TP, "83112F", "Himax");
 
 		if ((tmp_data[3] == 0x83) && (tmp_data[2] == 0x11) && (tmp_data[1] == 0x2f)) {
 			IC_TYPE = HX_83112F_SERIES_PWON;
@@ -1498,7 +1498,7 @@ bool himax_ic_package_check(void)
 		}
 		ret_data = false;
 		TPD_INFO("%s:Read driver ID register Fail:\n", __func__);
-		//push_component_info(TP, "unknow", "unknow");
+		push_component_info(TP, "unknow", "unknow");
 	}
 
 	return ret_data;

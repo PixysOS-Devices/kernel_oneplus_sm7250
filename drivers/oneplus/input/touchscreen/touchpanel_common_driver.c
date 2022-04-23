@@ -4832,8 +4832,8 @@ void tp_util_get_vendor(struct touchpanel_data *ts, struct panel_info *panel_dat
 	sprintf(panel_data->manufacture_info.version, "0x%x", panel_data->TP_FW);
 	sprintf(panel_data->manufacture_info.manufacture, panel_data->chip_name);
 
-	//push_component_info(TOUCH_KEY, panel_data->manufacture_info.version, panel_data->manufacture_info.manufacture);
-	//push_component_info(TP, panel_data->manufacture_info.version, panel_data->manufacture_info.manufacture);
+	push_component_info(TOUCH_KEY, panel_data->manufacture_info.version, panel_data->manufacture_info.manufacture);
+	push_component_info(TP, panel_data->manufacture_info.version, panel_data->manufacture_info.manufacture);
 
 	TPD_INFO("%s fw:%s limit:%s\n", __func__, panel_data->fw_name, panel_data->test_limit_name);
 }
